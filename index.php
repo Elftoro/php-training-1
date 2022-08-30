@@ -33,7 +33,7 @@
                     $firstname = "Samir";
                     $score = 327;
 
-                    echo "<p>$firstname a obtenu $score points à cette partie.</p>"
+                    echo "<p>$firstname a obtenu $score points à cette partie.</p>";
                 ?>
             </div>
         </section>
@@ -51,6 +51,10 @@
                 $priceProduct2 = 2.90;
                 $nameProduct3 = "potion";
                 $priceProduct3 = 5.20;
+
+
+                echo "<li>$nameProduct1 : $priceProduct1 €</li>" . "<li>$nameProduct2 : $priceProduct2 €</li>" . "<li>$nameProduct3 : $priceProduct3 €</li>";
+
                 ?>
             </div>
         </section>
@@ -60,6 +64,15 @@
             <h2 class="exercice-ttl">Question 3</h2>
             <p class="exercice-txt">Calculer le montant total de la commande des produits ci-dessus avec les quantités ci-dessous et appliquez lui une remise de 10%.</p>
             <div class="exercice-sandbox">
+
+            <?php
+                $quantityProduct1 = 1;
+                $quantityProduct2 = 10;
+                $quantityProduct3 = 4;
+
+                echo ($quantityProduct1*$priceProduct1 +$quantityProduct2*$priceProduct2 + $quantityProduct3*$priceProduct3) * 0.9;
+                
+            ?>
 
             </div>
         </section>
@@ -71,6 +84,11 @@
             <p class="exercice-txt">Affichez le prix le plus élevé des 3 produits ci-dessus.</p>
             <div class="exercice-sandbox">
 
+            <?php 
+            
+            echo max($priceProduct1, $priceProduct2, $priceProduct3);
+            
+            ?>
             </div>
         </section>
 
@@ -84,6 +102,17 @@
             <h2 class="exercice-ttl">Question 5</h2>
             <p class="exercice-txt">Affichez dans une liste HTML le nom des produits de la question 2 qui sont présents dans la phrase : "<?=$text1?>"</p>
             <div class="exercice-sandbox">
+
+        <?php
+
+
+        echo var_dump(str_contains($text1, $nameProduct1));
+        var_dump(str_contains($text1, $nameProduct2));
+        var_dump(str_contains($text1, $nameProduct3));
+
+
+        ?>
+ 
 
             </div>
         </section>
