@@ -53,7 +53,7 @@
                 $priceProduct3 = 5.20;
 
 
-                echo "<li>$nameProduct1 : $priceProduct1 €</li>" . "<li>$nameProduct2 : $priceProduct2 €</li>" . "<li>$nameProduct3 : $priceProduct3 €</li>";
+                echo "<li>$nameProduct1 : $priceProduct1 €</li><li>$nameProduct2 : $priceProduct2 €</li><li>$nameProduct3 : $priceProduct3 €</li>";
 
                 ?>
             </div>
@@ -106,9 +106,19 @@
         <?php
 
 
-        echo var_dump(str_contains($text1, $nameProduct1));
-        var_dump(str_contains($text1, $nameProduct2));
-        var_dump(str_contains($text1, $nameProduct3));
+        // echo var_dump(str_contains($text1, $nameProduct1));
+        // var_dump(str_contains($text1, $nameProduct2));
+        // var_dump(str_contains($text1, $nameProduct3));
+        
+        if (str_contains($text1, $nameProduct1)) {
+            echo "<li>$nameProduct1</li>";
+        };
+        if (str_contains($text1, $nameProduct2)) {
+            echo "<li>$nameProduct2</li>";
+        };
+        if (str_contains($text1, $nameProduct3)) {
+            echo "<li>$nameProduct3</li>";
+        };
 
 
         ?>
@@ -134,6 +144,37 @@
                 $scorePlayer4 = 134;
                 $namePlayer5 = "Kevin";
                 $scorePlayer5 = 103;
+                
+
+                if ($scorePlayer1 > 50 && $scorePlayer1 < 150 ) {
+
+                    echo "<li>$namePlayer1</li>";
+
+                };
+                
+                if ($scorePlayer2 > 50 && $scorePlayer2 < 150 ) {
+
+                    echo "<li>$namePlayer2</li>";
+
+                };
+
+                if ($scorePlayer3 > 50 && $scorePlayer3 < 150 ) {
+
+                    echo "<li>$namePlayer3</li>";
+
+                };
+
+                if ($scorePlayer4 > 50 && $scorePlayer4 < 150 ) {
+
+                    echo "<li>$namePlayer4</li>";
+
+                };
+
+                if ($scorePlayer5 > 50 && $scorePlayer5 < 150 ) {
+                    
+                    echo "<li>$namePlayer5</li>";
+
+                };
 
                 ?>
             </div>
@@ -145,6 +186,12 @@
             <h2 class="exercice-ttl">Question 7</h2>
             <p class="exercice-txt">En réutilisant les scores de la question pécédente, afficher le nom du joueur ayant obtenu le plus grand score.</p>
             <div class="exercice-sandbox">
+
+                <?php
+
+                echo max($scorePlayer1, $scorePlayer2, $scorePlayer3, $scorePlayer4, $scorePlayer5);
+
+                ?>
                 
             </div>
         </section>
