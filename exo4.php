@@ -118,6 +118,20 @@
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau d'entiers. La fonction doit retourner les valeurs du tableau mulipliées par 2.</p>
             <div class="exercice-sandbox">
 
+            <?php 
+
+            function multiplyBy(array $array):array{
+                $arr = [];
+                foreach($array as $values) {
+                    $arr[$values] = $values * 2;
+                }
+                return $arr;
+            }
+            var_dump(multiplyBy($array))
+
+
+            ?>
+
             </div>
         </section>
 
@@ -126,6 +140,20 @@
             <h2 class="exercice-ttl">Question 4</h2>
             <p class="exercice-txt">Déclarer une fonction qui prend en paramètre un tableau d'entiers et un entier. La fonction doit retourner les valeurs du tableau divisées par le second paramètre</p>
             <div class="exercice-sandbox">
+
+            <?php
+
+            function misterPlouploux(array $array, int $div):array{
+                $arr = [];
+                foreach($array as $value){
+                  $arr[] = $value / $div;
+                }
+                return $arr;
+            }
+
+            var_dump(misterPlouploux($array, 3));
+
+            ?>
 
             </div>
         </section>
