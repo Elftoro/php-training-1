@@ -46,6 +46,23 @@ try {
             <h2 class="exercice-ttl">Question 1</h2>
             <p class="exercice-txt">Récupérer dans un tableau puis affichez l'ensemble des plateformes de diffusion des séries. Afficher les par ordre alphabétique.</p>
             <div class="exercice-sandbox">
+
+            <?php
+
+            // $query = $series->prepare("SELECT name, availableOn FROM $series GROUP BY name ASC;");
+
+            // $query->execute([
+            //     "name",
+            //     "availableOn",
+            // ]);
+
+                
+
+
+
+
+
+            ?>
                 
             </div>
         </section>
